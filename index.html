@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="game-container">
+        <h1>🐍 Snake Game</h1>
+        <p class="subtitle">Eat apples. Grow bigger. Don't crash!</p>
+
+        <div class="score-board">
+            <div>
+                <span> SCORE</span>
+                <h2 id="score">0</h2>
+            </div>
+            <div>
+                <span>BEST SCORE</span>
+                <h2 id="bestScore">0</h2>
+            </div>
+        </div>
+
+        <div class="canvas-wrapper">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+            <div id="overlay" class="overlay">
+                <h2 id="overlayTitle">Ready to Play?</h2>
+                <p id="overlayText">Press Start to begin your adventure!</p>
+                <button id="startBtn">START GAME</button>
+            </div>
+        </div>
+
+        <p id="status">Use arrow keys or WASD to move</p>
+
+        <div class="controls">
+            <button class="control up" data-direction="up">▲</button>
+            <div class="middle-controls">
+                <button class="control" data-direction="left">◀</button>
+                <button class="control" data-direction="down">▼</button>
+                <button class="control" data-direction="right">▶</button>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button id="pauseBtn">⏸ PAUSE</button>
+            <button id="restartBtn">↻ RESTART</button>
+        </div>
+
+        <p class="tip">🍎 Eat apples to earn 10 points!</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
